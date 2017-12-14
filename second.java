@@ -12,7 +12,7 @@ public class second {
         while(n<=3){
             System.out.println(error_msg);
             str=in.next();
-            if(str.matches("[-+]?\\d+")){
+            if(str.matches("[+]?\\d+")){
                 n=Integer.parseInt(str);
             }
         }
@@ -22,7 +22,7 @@ public class second {
             if(array_one[i]%2==0&&array_one[i]!=0){
                 array_two_size++;
             }
-            if(i!=n&&i!=0)
+            if(i!=0)
                 System.out.print(",");
             System.out.print(array_one[i]);
         }
@@ -37,6 +37,7 @@ public class second {
                 }
             }
         }
-        System.out.println(";");
+        if(array_two_size!=0)
+            System.out.print(";");
     }
 }
